@@ -1,0 +1,475 @@
+# Copyright (C) 2026 Fernando Tellado
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: EU Withdrawal Compliance 1.0.0\n"
+"Report-Msgid-Bugs-To: https://servicios.ayudawp.com\n"
+"POT-Creation-Date: 2026-05-01 06:32+0000\n"
+"PO-Revision-Date: 2026-05-01 12:13+0200\n"
+"Last-Translator: Fernando Tellado <fernando@tellado.es>\n"
+"Language-Team: Spanish (Spain) <https://ayudawp.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: eu-withdrawal-compliance\n"
+"X-Generator: Poedit 3.8\n"
+
+msgid "Right of withdrawal"
+msgstr "Derecho de desistimiento"
+
+#: includes/functions-form.php:36
+msgid "We have received your withdrawal request. You will get a confirmation email shortly."
+msgstr "Hemos recibido tu solicitud de desistimiento. Recibirás un correo electrónico de confirmación en breve."
+
+#: includes/functions-form.php:54
+msgid "Use this form to exercise your withdrawal right under applicable EU consumer protection law. We will process your request and confirm by email within 24 hours."
+msgstr ""
+"Usa este formulario para ejercer tu derecho de desistimiento al amparo de la normativa europea de protección al consumidor. Procesaremos tu solicitud y te la confirmaremos por correo electrónico en menos de 24 "
+"horas."
+
+#: includes/functions-form.php:69
+msgid "Leave this field empty"
+msgstr "Deja este campo vacío"
+
+#: includes/functions-form.php:74
+msgid "Full name"
+msgstr "Nombre completo"
+
+#: includes/functions-form.php:79
+msgid "Email used in the order"
+msgstr "Correo electrónico utilizado en el pedido"
+
+#: includes/functions-form.php:84 includes/functions-admin.php:143
+msgid "Order number"
+msgstr "Número de pedido"
+
+#: includes/functions-form.php:86
+msgid "You can find it in the confirmation email we sent you."
+msgstr "Lo encontrarás en el correo electrónico de confirmación que te enviamos."
+
+#: includes/functions-form.php:90 includes/functions-admin.php:144
+msgid "Order date"
+msgstr "Fecha del pedido"
+
+#: includes/functions-form.php:95
+msgid "Scope of the withdrawal"
+msgstr "Alcance del desistimiento"
+
+#: includes/functions-form.php:97
+msgid "Full order"
+msgstr "Pedido completo"
+
+#: includes/functions-form.php:98
+msgid "Specific products only"
+msgstr "Solo productos concretos"
+
+#: includes/functions-form.php:103
+msgid "Affected products / additional information"
+msgstr "Productos afectados o información adicional"
+
+#: includes/functions-form.php:105
+msgid "If you have selected partial withdrawal, list the products affected here."
+msgstr "Si has marcado desistimiento parcial, indica aquí qué productos quieres devolver."
+
+#: includes/functions-form.php:120
+#, php-format
+msgid "I have read and accept the <a href=\"%s\" target=\"_blank\" rel=\"noopener\">privacy policy</a>."
+msgstr "He leído y acepto la <a href=\"%s\" target=\"_blank\" rel=\"noopener\">política de privacidad</a>."
+
+#: includes/functions-form.php:132
+msgid "I confirm that the information provided is correct."
+msgstr "Confirmo que los datos facilitados son correctos."
+
+#: includes/functions-form.php:140
+msgid "Exercise withdrawal right"
+msgstr "Solicitar desistimiento"
+
+#: includes/functions-form.php:156
+msgid "Security check failed. Please refresh the page and try again."
+msgstr "Ha fallado la comprobación de seguridad. Recarga la página y vuelve a intentarlo."
+
+#: includes/functions-form.php:157
+msgid "Your request looks like spam and was rejected."
+msgstr "Tu solicitud parece spam y ha sido rechazada."
+
+#: includes/functions-form.php:158
+msgid "Some required fields are missing. Please fill them in."
+msgstr "Faltan campos obligatorios por rellenar."
+
+#: includes/functions-form.php:159
+msgid "The email address is not valid."
+msgstr "La dirección de correo electrónico no es válida."
+
+#: includes/functions-form.php:160
+msgid "We could not match this email with the order number provided."
+msgstr "No hemos podido relacionar este correo electrónico con el número de pedido indicado."
+
+#: includes/functions-form.php:161
+msgid "The 14-day withdrawal period has already expired for this order."
+msgstr "El plazo de 14 días para desistir de este pedido ya ha vencido."
+
+#: includes/functions-form.php:162
+msgid "An error occurred. Please try again later."
+msgstr "Ha ocurrido un error. Inténtalo de nuevo más tarde."
+
+#: includes/functions-cpt.php:21
+msgctxt "post type general name"
+msgid "Withdrawals"
+msgstr "Desistimientos"
+
+#: includes/functions-cpt.php:22
+msgctxt "post type singular name"
+msgid "Withdrawal"
+msgstr "Desistimiento"
+
+#: includes/functions-cpt.php:23
+msgctxt "admin menu"
+msgid "Withdrawals"
+msgstr "Desistimientos"
+
+#: includes/functions-cpt.php:24
+msgctxt "add new on admin bar"
+msgid "Withdrawal"
+msgstr "Desistimiento"
+
+#: includes/functions-cpt.php:25
+msgid "All withdrawals"
+msgstr "Todos los desistimientos"
+
+#: includes/functions-cpt.php:26
+msgid "View withdrawal"
+msgstr "Ver desistimiento"
+
+#: includes/functions-cpt.php:27
+msgid "Search withdrawals"
+msgstr "Buscar desistimientos"
+
+#: includes/functions-cpt.php:28
+msgid "No withdrawals found."
+msgstr "No se han encontrado desistimientos."
+
+#: includes/functions-cpt.php:29
+msgid "No withdrawals in Trash."
+msgstr "No hay desistimientos en la papelera."
+
+#: includes/functions-cpt.php:65
+msgctxt "withdrawal status"
+msgid "Processed"
+msgstr "Procesado"
+
+#: includes/functions-cpt.php:73
+#, php-format
+msgid "Processed <span class=\"count\">(%s)</span>"
+msgid_plural "Processed <span class=\"count\">(%s)</span>"
+msgstr[0] "Procesado <span class=\"count\">(%s)</span>"
+msgstr[1] "Procesados <span class=\"count\">(%s)</span>"
+
+#. translators: %s: site name.
+#: includes/functions-emails.php:26
+#, php-format
+msgid "[%s] We received your withdrawal request"
+msgstr "[%s] Hemos recibido tu solicitud de desistimiento"
+
+#: includes/functions-emails.php:31
+msgid "Partial withdrawal (specific products only)"
+msgstr "Desistimiento parcial (solo productos concretos)"
+
+#: includes/functions-emails.php:32 includes/functions-emails.php:91
+msgid "Full withdrawal"
+msgstr "Desistimiento completo"
+
+#. translators: %s: customer name.
+#: includes/functions-emails.php:37
+#, php-format
+msgid "Hi %s,"
+msgstr "Hola %s,"
+
+#: includes/functions-emails.php:41
+msgid "We have received your withdrawal request with the following details:"
+msgstr "Hemos recibido tu solicitud de desistimiento con los siguientes datos:"
+
+#: includes/functions-emails.php:43 includes/functions-emails.php:100 includes/functions-admin.php:25
+msgid "Order"
+msgstr "Pedido"
+
+#: includes/functions-emails.php:44 includes/functions-emails.php:101 includes/functions-admin.php:26 includes/functions-admin.php:145
+msgid "Scope"
+msgstr "Alcance"
+
+#: includes/functions-emails.php:46
+msgid "We will review the request and confirm next steps within 24 hours. If you do not hear from us, please reply to this email."
+msgstr "Vamos a revisar la solicitud y te confirmaremos los siguientes pasos en menos de 24 horas. Si no recibes nuestro mensaje, responde a este correo electrónico."
+
+#. translators: %s: site name.
+#: includes/functions-emails.php:50
+#, php-format
+msgid "Thanks, the %s team"
+msgstr "Gracias, el equipo de %s"
+
+#. translators: 1: site name, 2: order number.
+#: includes/functions-emails.php:84
+#, php-format
+msgid "[%1$s] New withdrawal request — order %2$s"
+msgstr "[%1$s] Nueva solicitud de desistimiento — pedido %2$s"
+
+#: includes/functions-emails.php:90
+msgid "Partial withdrawal"
+msgstr "Desistimiento parcial"
+
+#: includes/functions-emails.php:96
+msgid "A new withdrawal request has just been submitted."
+msgstr "Acaba de entrar una nueva solicitud de desistimiento."
+
+#: includes/functions-emails.php:98 includes/functions-admin.php:23
+msgid "Customer"
+msgstr "Cliente"
+
+#: includes/functions-emails.php:99 includes/functions-admin.php:24 includes/functions-admin.php:142
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: includes/functions-emails.php:103
+msgid "Details:"
+msgstr "Detalles:"
+
+#: includes/functions-emails.php:104
+msgid "(empty)"
+msgstr "(vacío)"
+
+#: includes/functions-emails.php:106
+msgid "View in admin:"
+msgstr "Ver en la administración:"
+
+#. translators: 1: order number, 2: customer name.
+#: includes/functions-handler.php:71
+#, php-format
+msgid "Order %1$s — %2$s"
+msgstr "Pedido %1$s — %2$s"
+
+#: includes/functions-emails-wc.php:71
+msgid "You have 14 days from receipt to exercise your withdrawal right without giving any reason. To do so, use our online withdrawal function:"
+msgstr "Tienes 14 días desde la recepción para ejercer tu derecho de desistimiento sin necesidad de justificación. Para hacerlo, usa nuestra función de desistimiento online:"
+
+#: includes/functions-emails-wc.php:82
+msgid "You have 14 days from receipt to exercise your withdrawal right without giving any reason."
+msgstr "Tienes 14 días desde la recepción para ejercer tu derecho de desistimiento sin necesidad de justificación."
+
+#: includes/functions-emails-wc.php:86
+msgid "Exercise withdrawal right here"
+msgstr "Solicitar desistimiento aquí"
+
+#: includes/functions-woocommerce.php:111
+msgid "partial"
+msgstr "parcial"
+
+#: includes/functions-woocommerce.php:112
+msgid "full"
+msgstr "completo"
+
+#. translators: 1: scope label, 2: details, 3: log ID.
+#: includes/functions-woocommerce.php:116
+#, php-format
+msgid "EU withdrawal request received (%1$s). Details: %2$s. Log ID: #%3$d"
+msgstr "Solicitud de desistimiento UE recibida (%1$s). Detalles: %2$s. ID de registro: #%3$d"
+
+#: includes/functions-woocommerce.php:224
+msgid "Withdraw"
+msgstr "Desistir"
+
+#: includes/functions-settings.php:25
+msgid "EU Withdrawal settings"
+msgstr "Ajustes de desistimiento UE"
+
+#: includes/functions-settings.php:23
+msgid "EU Withdrawal"
+msgstr "Desistimiento UE"
+
+#: includes/functions-settings.php:24
+msgid "Settings"
+msgstr "Ajustes"
+
+#: includes/functions-settings.php:55
+msgid "General"
+msgstr "General"
+
+#: includes/functions-settings.php:62
+msgid "Notification email"
+msgstr "Correo electrónico de aviso"
+
+#: includes/functions-settings.php:70
+msgid "Withdrawal page"
+msgstr "Página de desistimiento"
+
+#: includes/functions-settings.php:83
+msgid "Configure where notifications are sent and which page hosts the withdrawal form."
+msgstr "Configura a dónde se envían los avisos y en qué página se publica el formulario de desistimiento."
+
+#: includes/functions-settings.php:98
+msgid "Address that receives a notification each time a customer submits a withdrawal request."
+msgstr "Dirección que recibe un aviso cada vez que un cliente envía una solicitud de desistimiento."
+
+#: includes/functions-settings.php:111
+msgid "— Select a page —"
+msgstr "— Selecciona una página —"
+
+#: includes/functions-settings.php:117
+msgid "Page where the withdrawal form is published. Make sure it includes the [ayudawp_withdrawal_form] shortcode."
+msgstr "Página donde se publica el formulario de desistimiento. Asegúrate de que incluye el shortcode [ayudawp_withdrawal_form]."
+
+#: includes/functions-settings.php:139
+msgid "Withdrawal form public URL:"
+msgstr "URL pública del formulario de desistimiento:"
+
+#: includes/functions-settings.php:150
+msgid "Save changes"
+msgstr "Guardar cambios"
+
+#: includes/functions-settings.php:166
+msgid "How to use this plugin"
+msgstr "Cómo usar este plugin"
+
+#: includes/functions-settings.php:168
+msgid "You can place the withdrawal form anywhere on your site using the following shortcode:"
+msgstr "Puedes colocar el formulario de desistimiento en cualquier parte de tu sitio con el siguiente shortcode:"
+
+#. translators: %s: WooCommerce My Account withdrawal endpoint URL.
+#: includes/functions-settings.php:176
+#, php-format
+msgid "WooCommerce customers can also access the form from their account at: %s"
+msgstr "Los clientes de WooCommerce también pueden acceder al formulario desde su cuenta en: %s"
+
+#: includes/functions-settings.php:185
+msgid "For maximum visibility, link the withdrawal page from your footer next to your privacy policy and terms of service. Customers must be able to find it within a couple of clicks from any page on the site."
+msgstr ""
+"Para máxima visibilidad, enlaza la página de desistimiento desde el pie de tu sitio, junto a la política de privacidad y los términos. Los clientes deben poder encontrarla a un par de clics desde cualquier "
+"página."
+
+#: includes/functions-settings.php:194
+msgid "About the EU withdrawal function"
+msgstr "Sobre la función de desistimiento de la UE"
+
+#: includes/functions-settings.php:198
+msgid ""
+"This plugin implements the digital withdrawal function required by <a href=\"https://eur-lex.europa.eu/eli/dir/2023/2673/oj\" target=\"_blank\" rel=\"noopener\">EU Directive 2023/2673</a>, applicable to all EU "
+"online retailers from June 19, 2026."
+msgstr ""
+"Este plugin implementa la función digital de desistimiento que exige la <a href=\"https://eur-lex.europa.eu/eli/dir/2023/2673/oj\" target=\"_blank\" rel=\"noopener\">Directiva (UE) 2023/2673</a>, aplicable a "
+"todos los comerciantes online de la UE desde el 19 de junio de 2026."
+
+#: eu-withdrawal-compliance.php:75
+msgid "[Sample template — review with a legal advisor before publishing.]"
+msgstr "[Plantilla orientativa — revísala con tu asesor legal antes de publicarla.]"
+
+#: eu-withdrawal-compliance.php:76
+msgid ""
+"You have a 14-day withdrawal period from the moment you receive your order to cancel your purchase, without giving any reason and without penalty, as established by EU Directive 2023/2673 and the consumer "
+"protection laws applicable in your country."
+msgstr ""
+"Dispones de un plazo de 14 días desde la recepción de tu pedido para cancelar tu compra, sin necesidad de justificación y sin penalización, según establecen la Directiva (UE) 2023/2673 y la normativa de "
+"protección al consumidor aplicable en tu país."
+
+#: eu-withdrawal-compliance.php:77
+msgid ""
+"To exercise this right, fill in the form below. You will receive an automatic confirmation by email once your request is registered. The refund will be processed within the legal deadline that applies to your "
+"purchase."
+msgstr ""
+"Para ejercer este derecho, rellena el formulario siguiente. Recibirás una confirmación automática por correo electrónico cuando registremos tu solicitud. La devolución se tramitará dentro del plazo legal "
+"aplicable a tu compra."
+
+#: eu-withdrawal-compliance.php:78
+msgid ""
+"Some products and services are excluded from the right of withdrawal (custom-made goods, perishables, sealed digital content downloaded with your express consent, hygiene-sealed items, etc.). Please review our "
+"terms and conditions for the full list of exceptions."
+msgstr ""
+"Algunos productos y servicios quedan excluidos del derecho de desistimiento (productos personalizados, perecederos, contenidos digitales descargados con tu consentimiento expreso, productos precintados por "
+"motivos de higiene, etc.). Consulta nuestros términos y condiciones para ver la lista completa de excepciones."
+
+#: includes/class-aeuw-promo-banner.php:303
+msgid "Starter kit for your site"
+msgstr "Kit inicial para tu sitio"
+
+#: includes/functions-admin.php:22
+msgid "Reference"
+msgstr "Referencia"
+
+#: includes/functions-admin.php:27 includes/functions-admin.php:124
+msgid "Status"
+msgstr "Estado"
+
+#: includes/functions-admin.php:28
+msgid "Date"
+msgstr "Fecha"
+
+#: includes/functions-admin.php:81
+msgid "Partial"
+msgstr "Parcial"
+
+#: includes/functions-admin.php:82
+msgid "Full"
+msgstr "Completo"
+
+#: includes/functions-admin.php:89 includes/functions-admin.php:95 includes/functions-admin.php:183
+msgid "Pending"
+msgstr "Pendiente"
+
+#: includes/functions-admin.php:90 includes/functions-admin.php:184
+msgid "Accepted"
+msgstr "Aceptado"
+
+#: includes/functions-admin.php:91 includes/functions-admin.php:185
+msgid "Rejected"
+msgstr "Rechazado"
+
+#: includes/functions-admin.php:92 includes/functions-admin.php:186
+msgid "Completed"
+msgstr "Completado"
+
+#: includes/functions-admin.php:115
+msgid "Withdrawal request details"
+msgstr "Detalles de la solicitud de desistimiento"
+
+#: includes/functions-admin.php:141
+msgid "Customer name"
+msgstr "Nombre del cliente"
+
+#: includes/functions-admin.php:146
+msgid "IP address"
+msgstr "Dirección IP"
+
+#: includes/functions-admin.php:147
+msgid "User agent"
+msgstr "User agent"
+
+#: includes/functions-admin.php:164
+msgid "Additional information"
+msgstr "Información adicional"
+
+#: includes/functions-admin.php:190
+msgid "Set status"
+msgstr "Cambiar estado"
+
+#: includes/functions-admin.php:204
+msgid "Track the internal handling state of this request."
+msgstr "Lleva el seguimiento interno del estado de gestión de esta solicitud."
+
+#: eu-withdrawal-compliance.php:154
+msgid "Withdrawals"
+msgstr "Desistimientos"
+
+#: eu-withdrawal-compliance.php:179
+msgid "EU Withdrawal Compliance is active."
+msgstr "EU Withdrawal Compliance ya está activo."
+
+#: eu-withdrawal-compliance.php:183
+msgid "A \"Right of withdrawal\" page with a sample legal template was created automatically. Review the text, link the page from your footer and configure the notification email."
+msgstr "Se ha creado automáticamente una página «Derecho de desistimiento» con un texto legal de ejemplo. Revisa el contenido, enlaza la página desde tu pie de página y configura el correo electrónico de aviso."
+
+#: eu-withdrawal-compliance.php:188
+msgid "Open settings"
+msgstr "Abrir ajustes"
+
+#: eu-withdrawal-compliance.php:192
+msgid "Edit withdrawal page"
+msgstr "Editar página de desistimiento"
