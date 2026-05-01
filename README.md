@@ -29,7 +29,7 @@ WordPress plugin that adds the EU online withdrawal function required by Directi
 
 #### From GitHub release
 
-1. Download the latest `.zip` from the [Releases page](https://github.com/fernandotellado/eu-withdrawal-compliance/releases).
+1. Download the latest `.zip` from [this direct link](https://github.com/fernandotellado/eu-withdrawal-compliance/archive/refs/heads/main.zip).
 2. In your WordPress admin, go to **Plugins → Add New → Upload Plugin**.
 3. Upload the zip and activate.
 
@@ -108,7 +108,7 @@ Plugin de WordPress que añade la función online de desistimiento exigida por l
 
 #### Desde GitHub (Releases)
 
-1. Descarga el `.zip` más reciente desde la [página de Releases](https://github.com/fernandotellado/eu-withdrawal-compliance/releases).
+1. Descarga el `.zip` más reciente desde [este enlace directo](https://github.com/fernandotellado/eu-withdrawal-compliance/archive/refs/heads/main.zip).
 2. En el panel de WordPress, ve a **Plugins → Añadir nuevo → Subir plugin**.
 3. Sube el zip y activa.
 
