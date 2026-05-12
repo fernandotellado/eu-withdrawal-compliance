@@ -4,6 +4,14 @@ WordPress plugin that adds the EU online withdrawal function required by Directi
 
 🇬🇧 [English](#english) · 🇪🇸 [Español](#español)
 
+> 📦 **The plugin is being submitted to [WordPress.org](https://wordpress.org/plugins/) as `eu-withdrawal-compliance` (version 1.4.0).**
+> Once approved, install and update it from your WordPress admin → **Plugins → Add New** → search "EU Withdrawal Compliance".
+> Sites that already have it installed under the correct slug (`wp-content/plugins/eu-withdrawal-compliance/`) will receive the 1.4.0 update automatically via the standard WordPress updater. This GitHub repo will become a read-only archive a few days after the wp.org release — feature work and bugfixes will live on wp.org from then on.
+>
+> 📦 **El plugin se está enviando a [WordPress.org](https://es.wordpress.org/plugins/) como `eu-withdrawal-compliance` (versión 1.4.0).**
+> Cuando se apruebe, instálalo y actualízalo desde tu admin de WordPress → **Plugins → Añadir nuevo** → busca "EU Withdrawal Compliance".
+> Las webs que ya lo tienen instalado con el slug correcto (`wp-content/plugins/eu-withdrawal-compliance/`) recibirán la 1.4.0 automáticamente desde el actualizador de WordPress. Este repo de GitHub pasará a archivo de solo lectura unos días después de la publicación en wp.org — a partir de ese momento las nuevas funcionalidades y correcciones de fallos viven en wp.org.
+
 ---
 
 ## English
@@ -28,7 +36,7 @@ WordPress plugin that adds the EU online withdrawal function required by Directi
 
 - WordPress 6.0 or higher
 - PHP 7.4 or higher
-- WooCommerce 7.0 or higher (recommended)
+- WooCommerce 7.0 or higher
 
 ### Installation
 
@@ -170,7 +178,7 @@ Plugin de WordPress que añade la función online de desistimiento exigida por l
 
 - WordPress 6.0 o superior
 - PHP 7.4 o superior
-- WooCommerce 7.0 o superior (recomendado)
+- WooCommerce 7.0 o superior
 
 ### Instalación
 
