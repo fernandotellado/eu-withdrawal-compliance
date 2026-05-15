@@ -1,16 +1,16 @@
 # EU Withdrawal Compliance
 
+> ## 📢 Now on WordPress.org / Ahora en WordPress.org
+>
+> **Install from / Instálalo desde:** https://wordpress.org/plugins/eu-withdrawal-compliance/
+>
+> This GitHub repo is kept as a historical mirror. Updates, support and downloads happen exclusively on WordPress.org from version 1.4.0 onwards.
+>
+> Este repo se conserva como espejo histórico. Las actualizaciones, soporte y descargas se gestionan exclusivamente en WordPress.org desde la versión 1.4.0.
+
 WordPress plugin that adds the EU online withdrawal function required by Directive (EU) 2023/2673, mandatory from 19 June 2026 for every online retailer in the European Union.
 
 🇬🇧 [English](#english) · 🇪🇸 [Español](#español)
-
-> 📦 **The plugin is being submitted to [WordPress.org](https://wordpress.org/plugins/) as `eu-withdrawal-compliance` (version 1.4.0).**
-> Once approved, install and update it from your WordPress admin → **Plugins → Add New** → search "EU Withdrawal Compliance".
-> Sites that already have it installed under the correct slug (`wp-content/plugins/eu-withdrawal-compliance/`) will receive the 1.4.0 update automatically via the standard WordPress updater. This GitHub repo will become a read-only archive a few days after the wp.org release — feature work and bugfixes will live on wp.org from then on.
->
-> 📦 **El plugin se está enviando a [WordPress.org](https://es.wordpress.org/plugins/) como `eu-withdrawal-compliance` (versión 1.4.0).**
-> Cuando se apruebe, instálalo y actualízalo desde tu admin de WordPress → **Plugins → Añadir nuevo** → busca "EU Withdrawal Compliance".
-> Las webs que ya lo tienen instalado con el slug correcto (`wp-content/plugins/eu-withdrawal-compliance/`) recibirán la 1.4.0 automáticamente desde el actualizador de WordPress. Este repo de GitHub pasará a archivo de solo lectura unos días después de la publicación en wp.org — a partir de ese momento las nuevas funcionalidades y correcciones de fallos viven en wp.org.
 
 ---
 
@@ -25,6 +25,7 @@ WordPress plugin that adds the EU online withdrawal function required by Directi
 - **Configurable deadline** (1.2.0+): choose whether the 14-day window starts from the order date or from the WooCommerce completion date, and add extra grace days from the settings page.
 - **Article 16 exclusions** (1.2.0+): mark individual products or whole categories as excluded from the right of withdrawal (custom-made, perishable, sealed digital, etc.). Requests on orders containing excluded items are flagged for the admin to review manually — never auto-rejected, since a partial withdrawal over the rest of the order can still be valid.
 - **Verifiable receipt hash** (1.2.0+): every submission generates a SHA-256 hash sent to the customer in the confirmation email so they keep a tamper-evident proof on a durable medium.
+- **Native GDPR integration** (1.4.0+): contributes a suggested Privacy Policy snippet and registers a personal data exporter and eraser so admins can answer access and erasure requests from **Tools → Export Personal Data** and **Tools → Erase Personal Data**, keyed on the customer email.
 - Adds a private note to the WooCommerce order at every step of the lifecycle: when the request is received and again when it is accepted, rejected or marked as completed.
 - Sends a confirmation email to the customer on submission **and** a follow-up email when the request is accepted, rejected or completed. Optional admin comment is forwarded to the customer (required for rejections, optional for completed). Notification email to the shop admin uses reply-to pointing to the customer.
 - Bulk actions in the withdrawals listing to mark several requests as accepted, rejected or completed at once.
@@ -36,25 +37,15 @@ WordPress plugin that adds the EU online withdrawal function required by Directi
 
 - WordPress 6.0 or higher
 - PHP 7.4 or higher
-- WooCommerce 7.0 or higher
+- WooCommerce 7.0 or higher (declared as a required plugin in the header from 1.4.0)
 
 ### Installation
 
-#### From GitHub release
+Install from the official WordPress.org directory:
 
-1. Download the latest `eu-withdrawal-compliance.zip` from [the latest release](https://github.com/fernandotellado/eu-withdrawal-compliance/releases/latest).
-2. In your WordPress admin, go to **Plugins → Add New → Upload Plugin**.
-3. Upload the zip and activate.
+https://wordpress.org/plugins/eu-withdrawal-compliance/
 
-> ⚠️ Do **not** use the green "Code → Download ZIP" button on the repo page. That zip extracts as `eu-withdrawal-compliance-main/` and would install the plugin under the wrong slug, breaking future updates from WordPress.org.
-
-#### From source
-
-```bash
-git clone https://github.com/fernandotellado/eu-withdrawal-compliance.git
-```
-
-Move the folder to `wp-content/plugins/` and activate from the WordPress admin.
+In your WordPress admin go to **Plugins → Add New**, search for **EU Withdrawal Compliance** and click **Install**. From version 1.4.0 onwards the plugin is distributed exclusively through WordPress.org so you get automatic updates and translations out of the box.
 
 ### Configuration
 
@@ -82,12 +73,14 @@ The receipt hash helper `ayudawp_euw_compute_receipt_hash( $post_id, $name, $ema
 
 ### Migrating from the old "Download ZIP" install
 
-If you installed an early version of this plugin by clicking the green **Code → Download ZIP** button on GitHub, your install lives in `wp-content/plugins/eu-withdrawal-compliance-main/`. That is the wrong slug and it will block automatic updates from WordPress.org. Migrate like this without losing any data:
+If your plugin entry shows up as `eu-withdrawal-compliance-main` in your plugins list, you originally installed it by clicking the green **Code → Download ZIP** button on this repo. That folder slug is wrong and **WordPress will not show the automatic update from WordPress.org**. Everyone who installed from the proper `eu-withdrawal-compliance.zip` of a GitHub release gets the WordPress.org update automatically; you need this one-off migration so you do too. No data is lost in the process:
 
 1. **Deactivate** the existing plugin (the one labeled with the `-main` suffix). Do **not** click "Delete" yet.
-2. Upload the new `eu-withdrawal-compliance.zip` from the [latest release](https://github.com/fernandotellado/eu-withdrawal-compliance/releases/latest) via **Plugins → Add New → Upload Plugin**.
+2. Go to **Plugins → Add New**, search for **EU Withdrawal Compliance** and click **Install** to pull the latest version straight from WordPress.org.
 3. **Activate** the new plugin. It will reuse the existing settings, the existing withdrawal page and the existing log of requests automatically.
 4. Now go back to **Plugins**, find the old `-main` entry and click **Delete**. The plugin's uninstall script detects the canonical install next to it and keeps every option intact.
+
+From this point on you receive automatic updates straight from WordPress.org like every other plugin.
 
 ### Compliance status
 
@@ -96,6 +89,11 @@ This plugin implements the **minimum compliant version** of EU Directive 2023/26
 The German interpretation of the directive (the strictest known so far) requires a two-step confirmation flow: a first button that opens the function, an intermediate page with the customer's data, and a second "confirm withdrawal" button that submits the request. This is not yet implemented because Spanish transposition is still pending as of May 2026 and a future update may be required to align with the final Spanish Real Decreto.
 
 ### Changelog
+
+**1.4.0**
+- New: native integration with the WordPress GDPR tools. Contributes a suggested Privacy Policy snippet (visible in **Settings → Privacy → Policy Guide**) and registers a personal data exporter and eraser, so admins can answer access and erasure requests for withdrawal data from **Tools → Export Personal Data** and **Tools → Erase Personal Data** without leaving WordPress.
+- New: declares `Requires Plugins: woocommerce` in the plugin header so WordPress can prompt users to install or activate WooCommerce before activating the plugin.
+- Internal: WPCS pass over the codebase (alignment, multi-item arrays, trailing newlines, escaped output where needed). PHPCS is back to blocking the GitHub Actions workflow.
 
 **1.3.0**
 - New: configurable list of order statuses for which the withdrawal button and email notice are offered. All WooCommerce-registered statuses appear in the new **WooCommerce → EU Withdrawal → Eligible order statuses** section (custom statuses from shipping or fulfilment plugins included). Default: Processing and Completed.
@@ -148,9 +146,9 @@ For installation, configuration or custom development services, see [mantenimien
 
 ### Feedback
 
-This plugin is about to be submitted to the [WordPress.org plugin directory](https://wordpress.org/plugins/), and once it lives there its public support channel will be the wp.org support forum. I'd rather not run a parallel issue/PR process here on GitHub — keeping both in sync would only make sense if the project were going to live on GitHub long-term, and it isn't. Apologies for the inconvenience if you came here to open an issue or a pull request.
+This plugin is now published at the [WordPress.org plugin directory](https://wordpress.org/plugins/eu-withdrawal-compliance/) and its public support channel is the [wp.org support forum](https://wordpress.org/support/plugin/eu-withdrawal-compliance/). This GitHub repo is kept archived as a historical mirror; new issues and pull requests here will not be tracked.
 
-If you'd like to share feedback, report a bug, suggest a feature or send a fix, please email me at [github@ayudawp.com](mailto:github@ayudawp.com) — I read and reply to every message. Translations are very welcome too; send the `.po` file the same way. Thanks for understanding.
+If you'd like to share feedback, report a bug, suggest a feature or send a fix, please use the [wp.org support forum](https://wordpress.org/support/plugin/eu-withdrawal-compliance/) or email me at [github@ayudawp.com](mailto:github@ayudawp.com) — I read and reply to every message. Translations are very welcome through [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/eu-withdrawal-compliance/).
 
 ---
 
@@ -167,6 +165,7 @@ Plugin de WordPress que añade la función online de desistimiento exigida por l
 - **Plazo configurable** (1.2.0+): elige si la ventana de 14 días empieza desde la fecha del pedido o desde la fecha de completado de WooCommerce, y suma días de cortesía adicionales desde la página de ajustes.
 - **Exclusiones del Artículo 16** (1.2.0+): marca productos individuales o categorías enteras como excluidos del derecho de desistimiento (a medida, perecederos, contenido digital sellado, etc.). Las solicitudes sobre pedidos con productos excluidos quedan marcadas para revisión manual del admin — nunca se rechazan automáticamente, porque un desistimiento parcial sobre el resto del pedido puede seguir siendo válido.
 - **Hash de acuse verificable** (1.2.0+): cada solicitud genera un SHA-256 que se envía al cliente en el email de confirmación como prueba inmutable en soporte duradero.
+- **Integración RGPD nativa** (1.4.0+): añade un texto sugerido para la política de privacidad y registra un exportador y un borrador de datos personales para que el admin pueda responder a las solicitudes de acceso y supresión desde **Herramientas → Exportar datos personales** y **Herramientas → Borrar datos personales**, filtrando por el email del cliente.
 - Añade notas privadas al pedido de WooCommerce en cada paso del ciclo de vida: cuando se recibe la solicitud y de nuevo cuando se acepta, se rechaza o se marca como completada.
 - Envía email de confirmación al cliente al recibir la solicitud **y además** un email de seguimiento cuando se acepta, se rechaza o se marca como completada. Se puede incluir un comentario opcional del administrador en el email al cliente (obligatorio en rechazos, opcional en completadas). El email al admin lleva `reply-to` apuntando al cliente.
 - Acciones en lote en el listado de solicitudes para marcar varias como aceptadas, rechazadas o completadas a la vez.
@@ -178,25 +177,15 @@ Plugin de WordPress que añade la función online de desistimiento exigida por l
 
 - WordPress 6.0 o superior
 - PHP 7.4 o superior
-- WooCommerce 7.0 o superior
+- WooCommerce 7.0 o superior (declarado como plugin requerido en la cabecera desde 1.4.0)
 
 ### Instalación
 
-#### Desde GitHub (Releases)
+Instálalo desde el directorio oficial de WordPress.org:
 
-1. Descarga el archivo `eu-withdrawal-compliance.zip` desde [la última release](https://github.com/fernandotellado/eu-withdrawal-compliance/releases/latest).
-2. En el panel de WordPress, ve a **Plugins → Añadir nuevo → Subir plugin**.
-3. Sube el zip y activa.
+https://wordpress.org/plugins/eu-withdrawal-compliance/
 
-> ⚠️ **No uses** el botón verde "Code → Download ZIP" del repo. Ese zip se descomprime como `eu-withdrawal-compliance-main/` e instalaría el plugin con un slug incorrecto, rompiendo las actualizaciones futuras desde WordPress.org.
-
-#### Desde el código fuente
-
-```bash
-git clone https://github.com/fernandotellado/eu-withdrawal-compliance.git
-```
-
-Mueve la carpeta a `wp-content/plugins/` y activa desde el panel de WordPress.
+En el panel de WordPress ve a **Plugins → Añadir nuevo**, busca **EU Withdrawal Compliance** y pulsa **Instalar**. Desde la versión 1.4.0 el plugin se distribuye exclusivamente a través de WordPress.org, así que recibes las actualizaciones automáticas y las traducciones de la comunidad sin tener que hacer nada extra.
 
 ### Configuración
 
@@ -224,12 +213,14 @@ La función helper `ayudawp_euw_compute_receipt_hash( $post_id, $name, $email, $
 
 ### Migrar desde la instalación antigua de "Download ZIP"
 
-Si instalaste una primera versión del plugin pulsando el botón verde **Code → Download ZIP** de GitHub, tu instalación vive en `wp-content/plugins/eu-withdrawal-compliance-main/`. Ese slug es incorrecto y bloquea las actualizaciones automáticas desde WordPress.org. Migra así, sin perder ningún dato:
+Si tu plugin aparece como `eu-withdrawal-compliance-main` en la lista de plugins, en su día lo instalaste pulsando el botón verde **Code → Download ZIP** de este repo. Ese slug es incorrecto y **WordPress no te mostrará la actualización automática desde WordPress.org**. Quien lo instaló desde el `eu-withdrawal-compliance.zip` correcto de una release de GitHub recibe la actualización solo; tú necesitas esta migración puntual para entrar en el mismo carril. No se pierde nada en el proceso:
 
 1. **Desactiva** el plugin existente (el que termina en `-main`). **No** pulses "Eliminar" todavía.
-2. Sube el nuevo `eu-withdrawal-compliance.zip` desde la [última release](https://github.com/fernandotellado/eu-withdrawal-compliance/releases/latest) en **Plugins → Añadir nuevo → Subir plugin**.
+2. Ve a **Plugins → Añadir nuevo**, busca **EU Withdrawal Compliance** y pulsa **Instalar** para traer la última versión directamente desde WordPress.org.
 3. **Activa** el plugin nuevo. Reutilizará automáticamente los ajustes, la página de desistimiento existente y el log de solicitudes.
 4. Vuelve a **Plugins**, busca la entrada con sufijo `-main` y pulsa **Eliminar**. El script de desinstalación detecta que existe la instalación canónica al lado y conserva todas las opciones intactas.
+
+A partir de ese momento recibes las actualizaciones automáticas desde WordPress.org como cualquier otro plugin.
 
 ### Estado de cumplimiento
 
@@ -238,6 +229,11 @@ Este plugin implementa la **versión mínima conforme** con la Directiva (UE) 20
 La interpretación alemana de la directiva (la más estricta conocida hasta la fecha) exige un flujo de doble confirmación: un primer botón que abre la función, una página intermedia con los datos del cliente y un segundo botón «confirmar desistimiento» que envía la solicitud. Aún no está implementado porque la transposición española sigue pendiente a 1 de mayo de 2026, y es probable que se necesite una actualización futura para alinear el plugin con el Real Decreto definitivo.
 
 ### Registro de cambios
+
+**1.4.0**
+- Nuevo: integración nativa con las herramientas RGPD de WordPress. Añade un texto sugerido para la política de privacidad (visible en **Ajustes → Privacidad → Guía de política**) y registra un exportador y un borrador de datos personales, para que el admin pueda responder a solicitudes de acceso y supresión sobre los datos de desistimiento desde **Herramientas → Exportar datos personales** y **Herramientas → Borrar datos personales** sin salir de WordPress.
+- Nuevo: declara `Requires Plugins: woocommerce` en la cabecera del plugin para que WordPress avise al usuario y le proponga instalar o activar WooCommerce antes de activarlo.
+- Interno: barrido WPCS sobre el código (alineaciones, arrays multielemento, saltos finales, escapado donde hacía falta). PHPCS vuelve a bloquear el workflow de GitHub Actions.
 
 **1.3.0**
 - Nuevo: lista configurable de estados de pedido para los que se ofrece el botón de desistimiento y el aviso en emails. Aparecen todos los estados registrados en WooCommerce en la nueva sección **WooCommerce → EU Withdrawal → Eligible order statuses** (incluidos los estados personalizados de plugins de envío o fulfillment). Por defecto: Procesando y Completado.
@@ -290,6 +286,6 @@ Para servicios de instalación, configuración o desarrollo a medida, ver [mante
 
 ### Feedback
 
-El plugin está a punto de subirse al [directorio de plugins de WordPress.org](https://wordpress.org/plugins/) y, una vez allí, el canal público de soporte será el foro del propio directorio. Prefiero no mantener en paralelo un proceso de issues y pull requests en GitHub: tenerlos sincronizados solo tendría sentido si el proyecto fuese a vivir aquí a largo plazo, y no es el caso. Disculpa las molestias si venías a abrir una issue o un PR.
+El plugin ya está publicado en el [directorio de plugins de WordPress.org](https://wordpress.org/plugins/eu-withdrawal-compliance/) y el canal público de soporte es el [foro de soporte de wp.org](https://wordpress.org/support/plugin/eu-withdrawal-compliance/). Este repo de GitHub se mantiene archivado como espejo histórico; las issues y pull requests que se abran aquí no se atenderán.
 
-Para enviarme feedback, reportar un bug, sugerir una mejora o mandarme un parche, escríbeme a [github@ayudawp.com](mailto:github@ayudawp.com): leo y respondo todos los mensajes. Las traducciones también son muy bienvenidas; mándame el archivo `.po` por la misma vía. Gracias por entenderlo.
+Para enviar feedback, reportar un bug, sugerir una mejora o mandar un parche, usa el [foro de soporte de wp.org](https://wordpress.org/support/plugin/eu-withdrawal-compliance/) o escríbeme a [github@ayudawp.com](mailto:github@ayudawp.com): leo y respondo todos los mensajes. Las traducciones son muy bienvenidas a través de [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/eu-withdrawal-compliance/).
